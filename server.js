@@ -13,6 +13,9 @@ app.use(bodyParser.urlencoded({extended:true}));
 app.get('/', (req, res) => {
   res.sendFile(__dirname+'/index.html')   // sending HTML file with current directory
 })
+app.get('/404', (req, res) => {
+  res.sendFile(__dirname+'/404.php')   // sending HTML file with current directory
+})
 
 // handling post requests
 app.post("/",(req, res)=>{
